@@ -22,12 +22,12 @@ export const ImageGenerator = () => {
           "Content-Type": "application/json",
           Authorization:
             "Bearer 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", 
-          "User-Agent": "Firefox",
+          "User-Agent": "Chrome",
         },
         body: JSON.stringify({
           prompt: `${inputRef.current.values}`,
           n: 1,
-          size: "512x512",
+          size: "450x450",
         }),
       }
     );
