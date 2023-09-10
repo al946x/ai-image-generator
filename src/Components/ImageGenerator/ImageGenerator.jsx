@@ -21,8 +21,8 @@ export const ImageGenerator = () => {
         headers: {
           "Content-Type": "application/json",
           Authorization:
-            "Bearer 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",
-          "User-Agent": "Chrome",
+            "Bearer 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", 
+          "User-Agent": "Firefox",
         },
         body: JSON.stringify({
           prompt: `${inputRef.current.values}`,
@@ -32,9 +32,11 @@ export const ImageGenerator = () => {
       }
     );
 
-    var data = await response.json();
+  var data = await response.json();
+   console.log(data);
    var data_array = data.data;
-  setImage_url(data_array[0].url);
+   setImage_url(data_array[0].url);
+   setLoading(false);
 
   }
 
