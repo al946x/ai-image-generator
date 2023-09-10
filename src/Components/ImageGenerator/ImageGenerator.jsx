@@ -9,6 +9,10 @@ export const ImageGenerator = () => {
       <div className='img-loading'>
         <div className='image'><img src={ai_image} alt="" /></div>
       </div>
+      <div className='search-box'>
+        <input type="text" className='search-input' placeholder='Desribe What Image You Want Created' />
+      <div className='generate-btn'>Generate</div>
+      </div>
       </div>
   )
 }
