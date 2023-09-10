@@ -23,7 +23,7 @@ export const ImageGenerator = () => {
         headers: {
           "Content-Type": "application/json",
           Authorization:
-         "Bearer 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",
+         "Bearer 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",
             "User-Agent": "Chrome",
         
         },
