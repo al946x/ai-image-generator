@@ -14,7 +14,7 @@
     padding-bottom: 20px;
   }
   .header span {
-    color: #6c1bde;
+    color: #831bde;
     font-weight: 600;
   }
   
@@ -23,7 +23,7 @@
     flex-direction: column;
   }
   .image img{
-      width: 450px;
+      width: 512px;
   }
 
   .search-box {
@@ -70,9 +70,10 @@
     width: 0px;
     height: 8px;
     background: #971bde;
+    border-radius: 30px;
   }
   .loading-bar-full{
-    width: 512px;
+    width: 450px;
     height: 8px;
     background: #880fd4;
     transition: 15s;

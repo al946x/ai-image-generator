@@ -12,7 +12,9 @@ export const ImageGenerator = () => {
     if (inputRef.current.value==="") 
     {
       return 0;
-    }
+    } 
+
+   
     setLoading(true);
     const response = await fetch(
       "https://api.openai.com/v1/images/generations",
@@ -21,28 +23,29 @@ export const ImageGenerator = () => {
         headers: {
           "Content-Type": "application/json",
           Authorization:
-            "Bearer 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", 
-          "User-Agent": "Chrome",
+         "Bearer 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",
+            "User-Agent": "Chrome",
+        
         },
         body: JSON.stringify({
-          prompt: `${inputRef.current.values}`,
+          prompt: `${inputRef.current.value}`,
           n: 1,
-          size: "450x450",
+          size: "512x512",
         }),
       }
     );
 
   var data = await response.json();
    console.log(data);
-   var data_array = data.data;
-   setImage_url(data_array[0].url);
+   var dataArray = data[0];
+   setImage_url(dataArray.url[0]);
    setLoading(false);
 
   }
 
   return (
     <div className='ai-image-generator'>
-      <div className="header">Ai Image <span>Generator</span></div>
+      <div className="header">AI Image <span>Generator</span></div>
       <div className='img-loading'>
         <div className='image'><img src={image_url === "/" ? ai_image : image_url} alt="" /></div>
         <div className="loading">
