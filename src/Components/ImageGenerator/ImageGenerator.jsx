@@ -21,14 +21,13 @@ export const ImageGenerator = () => {
           "Bearer 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",
           "User-Agent": "Chrome",
           },
-          body.JSON.stringify({
-            prompt:`${inputRef.current.values}`
-          })
-
-
+          body:JSON.stringify({
+            prompt:`${inputRef.current.values}`,
+            n:1,
+            size:"512x512",
+          }),
         }
-      }
-    )
+    );
   }
 
   return (
@@ -39,7 +38,7 @@ export const ImageGenerator = () => {
       </div>
       <div className='search-box'>
         <input type="text" ref={inputRef} className='search-input' placeholder='Desribe What Image You Want Created' />
-      <div className='generate-btn'>Generate</div>
+      <div className='generate-btn' onClick={()=>{ImageGenerator()}}>Generate</div>
       </div>
       </div>
   )
