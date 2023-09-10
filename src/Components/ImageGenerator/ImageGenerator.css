@@ -86,3 +86,84 @@
     display: none;
 }
 
+/*media queries */
+
+/* Mobile devices (portrait and landscape) */
+@media screen and (max-width: 480px) {
+  .ai-image-generator {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .header {
+    font-size: 36px;
+    padding-bottom: 10px;
+  }
+  
+  .image img {
+    width: 100%;
+  }
+  
+  .search-box {
+    width: 90%;
+    padding: 0;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding-left: 15px;
+    margin-right: 0;
+    font-size: 12px;
+  }
+  
+  .generate-btn {
+    width: 50%; 
+    height: 60px; 
+    font-size: 13px; 
+  }
+  
+  .loading-bar-full {
+    width: 100%;
+  }
+}
+
+/* Tablets and small desktops */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .header {
+    font-size: 48px;
+  }
+  
+  .search-box {
+    width: 100%; 
+  }
+  
+  .search-input {
+    width: 100%;
+    padding-left: 15px;
+    margin-right: 0;
+  }
+  
+  .generate-btn {
+    width: 50%;
+    height: 60px;
+    font-size: 20px; 
+  }
+}
+
+/* Large desktops and beyond */
+@media screen and (min-width: 1025px) {
+  .search-box {
+    width: 600px;
+  }
+  
+  .search-input {
+    width: 500px;
+  }
+  
+  .generate-btn {
+    width: 300px; 
+    height: 60px;
+    font-size: 20px; 
+  }
+}
+
