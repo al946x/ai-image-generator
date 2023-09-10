@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './ImageGenerator.css'
 import ai_image from '../assets/ai_image.jpg'
 
@@ -31,6 +31,7 @@ export const ImageGenerator = () => {
     let data = await response.json();
     let data_array = data.data;
     setImage_url(data_array[0].url);
+     
   }
 
   return (
@@ -38,6 +39,9 @@ export const ImageGenerator = () => {
       <div className="header">Ai Image <span>Generator</span></div>
       <div className='img-loading'>
         <div className='image'><img src={image_url==="/"?ai_image:image_url} alt="" /></div>
+      <div className="loading"> 
+      <div className="loading-bar"></div></div>
+    <div className="loading-text">Loading...</div>
       </div>
       <div className='search-box'>
         <input type="text" ref={inputRef} className='search-input' placeholder='Desribe What Image You Want Created' />
