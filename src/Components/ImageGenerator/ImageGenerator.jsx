@@ -53,7 +53,7 @@ export const ImageGenerator = () => {
         <div className={loading ? "loading-text" : "display-none"}>Loading...</div>
       </div>
       <div className='search-box'>
-        <input type="text" ref={inputRef} className='search-input' placeholder='Describe What Image You Want Created' />
+        <input type="text" ref={inputRef} className='search-input' placeholder='Describe the image you want to create' />
         <div className='generate-btn' onClick={() => { ImageGenerator() }}>Generate</div>
       </div>
     </div>
