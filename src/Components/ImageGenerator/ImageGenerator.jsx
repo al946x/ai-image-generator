@@ -21,14 +21,15 @@ export const ImageGenerator = () => {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type":"application/json",
           Authorization:
-         "Bearer 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",
+          `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
             "User-Agent": "Chrome",
         
         },
-        body: JSON.stringify({
-          prompt: `${inputRef.current.value}`,
+
+        body:JSON.stringify({
+          prompt:`${inputRef.current.value}`,
           n: 1,
           size: "512x512",
         }),
