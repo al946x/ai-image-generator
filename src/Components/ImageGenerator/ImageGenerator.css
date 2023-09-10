@@ -60,3 +60,23 @@
     background: #831bde;
     cursor: pointer;
   }
+
+  .loading {
+    display: flex;
+    flex-direction: column;
+    margin-top: -6px;
+  }
+  .loading-bar {
+    width: 0px;
+    height: 8px;
+    background: #971bde;
+  }
+  .loading-bar-full{
+    width: 512px;
+    height: 8px;
+    background: #931bde;
+    transition: 15s;
+  }
+  .loading-text {
+    font-size: 18px;
+  }

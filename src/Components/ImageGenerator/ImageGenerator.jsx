@@ -6,6 +6,7 @@ export const ImageGenerator = () => {
 
   const [image_url,setImage_url] = useState("/");
   let inputRef = useRef(null);
+  const [loading,setLoading] = useState(false);
 
   const ImageGenerator = async () =>{
     if (inputRef.current.value=="") {
@@ -40,7 +41,7 @@ export const ImageGenerator = () => {
       <div className='img-loading'>
         <div className='image'><img src={image_url==="/"?ai_image:image_url} alt="" /></div>
       <div className="loading"> 
-      <div className="loading-bar"></div></div>
+      <div className={loading?"loading-bar-full": "loading-bar"}></div></div>
     <div className="loading-text">Loading...</div>
       </div>
       <div className='search-box'>
