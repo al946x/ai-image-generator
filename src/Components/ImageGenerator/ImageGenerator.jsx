@@ -37,8 +37,8 @@ export const ImageGenerator = () => {
 
   var data = await response.json();
    console.log(data);
-   var dataArray = data[0];
-   setImage_url(dataArray.url[0]);
+   var dataArray = data.data;
+   setImage_url(dataArray[0].url);
    setLoading(false);
 
   }
