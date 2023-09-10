@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ai-image-generator/static/css/main.f63c3fb8.css",
-    "main.js": "/ai-image-generator/static/js/main.e6e577bd.js",
+    "main.js": "/ai-image-generator/static/js/main.c864410d.js",
     "static/media/ai_image.jpg": "/ai-image-generator/static/media/ai_image.4b02091f3ef77e943fb8.jpg",
     "index.html": "/ai-image-generator/index.html",
     "main.f63c3fb8.css.map": "/ai-image-generator/static/css/main.f63c3fb8.css.map",
-    "main.e6e577bd.js.map": "/ai-image-generator/static/js/main.e6e577bd.js.map"
+    "main.c864410d.js.map": "/ai-image-generator/static/js/main.c864410d.js.map"
   },
   "entrypoints": [
     "static/css/main.f63c3fb8.css",
-    "static/js/main.e6e577bd.js"
+    "static/js/main.c864410d.js"
   ]
 }
