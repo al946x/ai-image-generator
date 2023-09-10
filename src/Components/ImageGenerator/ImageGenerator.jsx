@@ -42,7 +42,7 @@ export const ImageGenerator = () => {
         <div className='image'><img src={image_url==="/"?ai_image:image_url} alt="" /></div>
       <div className="loading"> 
       <div className={loading?"loading-bar-full": "loading-bar"}></div></div>
-    <div className="loading-text">Loading...</div>
+    <div className={loading?"loading-text" : "display-none"}>Loading...</div>
       </div>
       <div className='search-box'>
         <input type="text" ref={inputRef} className='search-input' placeholder='Desribe What Image You Want Created' />
