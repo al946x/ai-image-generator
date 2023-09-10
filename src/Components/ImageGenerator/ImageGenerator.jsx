@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './ImageGenerator.css'
 import ai_image from '../assets/ai_image.jpg'
 
 export const ImageGenerator = () => {
+
+  const [image_url,setImage_url] = useState("/");
+  let inputRef = useRef(null);
+
+  const ImageGenerator = async () =>{
+    if (inputRef.current.value=="") {
+      return 0;
+    }
+    
+  }
+
   return (
     <div className='ai-image-generator'>
       <div className="header">Ai Image <span>Generator</span></div>
       <div className='img-loading'>
-        <div className='image'><img src={ai_image} alt="" /></div>
+        <div className='image'><img src={image_url==="/"?default_image:image_url} alt="" /></div>
       </div>
       <div className='search-box'>
-        <input type="text" className='search-input' placeholder='Desribe What Image You Want Created' />
+        <input type="text" ref={inputRef} className='search-input' placeholder='Desribe What Image You Want Created' />
       <div className='generate-btn'>Generate</div>
       </div>
       </div>
